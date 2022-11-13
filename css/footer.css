@@ -1,0 +1,82 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(../fonts/Manrope-VariableFont_wght.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: black;
+  color: white;
+  display: flex;
+  text-align: center;
+}
+
+#esqrodape {
+  width: 25%;
+
+}
+
+#dirrodape {
+  width: 25%;
+
+}
+
+#meirodape {
+  width: 50%;
+  display: flex;
+}
+
+img[src="img/logo_white.png"] {
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+
+p[class="titrodape"] {
+  font-family: Poppins;
+  font-size: 9pt;
+  margin-top: 1em;
+}
+
+.fa-envelope,
+.fa-phone {
+  font-size: 12pt;
+}
+
+p[class='desctit'] {
+  text-decoration: none;
+  color: white;
+  font-family: Poppins;
+  font-weight: 8pt;
+}
+p[class='desctit'] > a {
+  text-decoration: none;
+  color: white;
+}
+p[class='desctit'] > a:hover {
+  text-decoration: underline;
+}
+
+.fa-person-circle-exclamation {
+  font-size: 13pt;
+}

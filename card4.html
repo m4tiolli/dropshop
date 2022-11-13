@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/card.css" />
+  </head>
+  <body>
+    <section class="product" id="acessorios">
+      <h2 class="product-category">acessórios</h2>
+      <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
+      <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
+      <div class="product-container">
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/13.png" class="product-thumb" alt="" />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Brinco argola masculino</h2>
+            <p class="product-short-description">
+              Brinco argola masculino, material prata.            </p>
+            <span class="price">R$ 35,90</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/14.png" class="product-thumb" alt="" />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Pulseira masculina</h2>
+            <p class="product-short-description">
+              Pulseira masculina, tamanho ajustável conforme o braço, material prata.            </p>
+            <span class="price">R$37,90</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/15.png" class="product-thumb" alt="" />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Relógio preto masculino</h2>
+            <p class="product-short-description">
+              Relógio preto masculino, marca SG, ajustável conforme o tamanho do braço.            </p>
+            <span class="price">R$149,90</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/16.png" class="product-thumb" alt="" />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Brinco masculino</h2>
+            <p class="product-short-description">
+              Brinco masculino ponto de luz, material prata.            </p>
+            <span class="price">R$39,90</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/17.png" class="product-thumb" alt="" />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Corrente masculina</h2>
+            <p class="product-short-description">
+              Corrente masculina, ajustável, material prata.            </p>
+            <span class="price">R$99,90</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/18.png" class="product-thumb" alt="" />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Gravata preta </h2>
+            <p class="product-short-description">
+              Gravata preta, 100% algodão, ajustável no corpo.            </p>
+            <span class="price">R$29,90</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/19.png" class="product-thumb" alt="" />
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Gravata cinza </h2>
+            <p class="product-short-description">
+              Gravata cinza, 100% algodão, ajustável no corpo.            </p>
+            <span class="price">R$29,90</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const productContainers = [
+        ...document.querySelectorAll(".product-container"),
+      ];
+      const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
+      const preBtn = [...document.querySelectorAll(".pre-btn")];
+
+      productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+
+        nxtBtn[i].addEventListener("click", () => {
+          item.scrollLeft += containerWidth;
+        });
+
+        preBtn[i].addEventListener("click", () => {
+          item.scrollLeft -= containerWidth;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+body {
+  background-image: url("../img/fundo_cadastro.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.content {
+  background-color: #fff;
+  width: 50em;
+  height: 50em;
+  margin: 5% auto;
+  display: block;
+  text-align: center;
+  border-radius: 2em;
+}
+
+img {
+  margin-top: 1em;
+  height: 6em;
+}
+
+h2 {
+  font-family: "Poppins";
+  font-weight: lighter;
+  font-size: 1.3em;
+}
+
+h2::after {
+  content: " ";
+  display: block;
+  width: 50%;
+  margin: auto;
+  height: 1px;
+  margin-top: 5px;
+  background: #616161;
+}
+
+.fa-eye {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}
+.col-3 {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+input,
+select {
+  font: 15px/24px "Roboto";
+  color: #333;
+  width: 90%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+.effect-1 {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+}
+.effect-1 ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #805a2e;
+  transition: 0.4s;
+}
+.effect-1:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
+form {
+  height: 30em;
+  width: 90%;
+  margin: auto;
+}
+select {
+  padding: 0.5em 0;
+  border: 1px solid #ccc;
+  outline: none;
+  color: #333;
+  background-color: transparent;
+  margin-top: 1.2em;
+}
+.allone {
+  width: 100%;
+  display: flex;
+}
+.one,
+.two {
+  width: 50%;
+}
+.three,
+.four {
+  margin-top: 1em;
+  width: 80%;
+  margin: auto;
+}
+
+.allone > div > div > input {
+  margin-top: 1em;
+}
+
+.three > div > input {
+	margin-top: 1.5em;
+}
+button {
+  margin: auto;
+  border-radius: 5em;
+  padding: 1em 1em;
+  font-family: "Manrope";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: none;
+}
+button[name="cadastrar"] {
+  width: 65%;
+  background-color: #805a2e;
+  font-size: 1em;
+  font-weight: bolder;
+  margin-bottom: 1em;
+  margin-top: 3em;
+  transition: 0.1s;
+}
+button[name="cadastrar"]:hover {
+  background-color: #8d673c;
+}
+button[name="cadastrar"]:active {
+  background-color: #684722;
+}
+
+button[name="voltar"] {
+  width: 35%;
+  background-color: #53391b;
+  font-size: 0.6em;
+  font-weight: lighter;
+  margin-bottom: 1em;
+  transition: 0.1s;
+}
+button[name="voltar"]:hover {
+  background-color: #664826;
+}
+button[name="voltar"]:active {
+  background-color: #422d14;
+}

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(../fonts/Manrope-VariableFont_wght.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 5em;
+  background-color: black;
+  display: flex;
+}
+
+#divLogo,
+#divLogin,
+#null {
+  display: flex;
+}
+
+img[src="img/logo_white.png"] {
+  width: 7em;
+  height: auto;
+  padding-left: 10em;
+}
+
+#divLogo {
+  width: 50%;
+}
+
+
+#divLogin {
+  width: 50%;
+  justify-content: end;
+}
+
+.logent {
+  font-family: Manrope;
+  font-size: 12pt;
+  color: white;
+  background: none;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  width: 10em !important;
+  margin-top: 1.5em;
+}
+
+.logent:hover {
+  color: #c9a34f;
+  text-decoration: underline;
+}

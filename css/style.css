@@ -1,0 +1,269 @@
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(/fonts/Manrope-VariableFont_wght.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(/fonts/Roboto-Light.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+#headerDiv {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+#backHeader {
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+
+#mensagem {
+  font-family: Poppins;
+  font-size: 10pt;
+  color: white;
+  background-color: black;
+  width: 20em;
+  height: 5em;
+  text-align: center;
+  position: fixed;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: opacity 200ms ease-in;
+  z-index: 99999;
+  border-radius: 20px;
+  left: 75%;
+  top: 5px;
+}
+
+.carousel {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  border-radius: 2em;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+  opacity: 1;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked
+  ~ .control-1
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
+#carousel-2:checked
+  ~ .control-2
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
+#carousel-3:checked
+  ~ .control-3
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet {
+  color: #3a3b3b;
+}
+
+#title {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Open Sans", sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
+    -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+.carousel-team-card {
+  margin-top: 50px;
+}
+
+.carousel-team-card-cell {
+  width: 32%;
+  margin: 0px 20px 20px 0;
+  background: #661032;
+  min-height: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel-team-card-cell * {
+  color: #ffffff;
+}
+
+.carousel-team-card-cell.doctor {
+  background: red;
+}
+
+.carousel-team-card-cell.cardio {
+  background: red;
+}
+
+.carousel-team-card-cell.physio {
+  background: red;
+}
+
+.carousel-team-card .flickity-prev-next-button.previous {
+  left: -50px;
+}
+
+.carousel-team-card .flickity-prev-next-button.next {
+  right: -50px;
+}
+
+.carousel-team-card-cell .carousel-card-team {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.carousel-team-card-cell .card-team-img {
+  width: 100%;
+  padding: 10px;
+  margin: 20px auto 0;
+}
+
+.carousel-team-card-cell .card-team-img img {
+  border-radius: 50%;
+  border: 5px solid white;
+  max-width: 150px;
+  -o-object-fit: cover;
+  -o-object-position: center;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 150px;
+}
+
+.carousel-team-card-cell .card-team-name {
+  margin: 20px 0;
+  padding: 0px 40px 0 40px;
+}
+
+.carousel-team-card-cell .card-team-content p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.carousel-team-card-cell .card-team-content {
+  margin: 0 40px 30px 40px;
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+}
+
+#cardDiv1::after, #cardDiv2::after, #cardDiv3::after, #cardDiv4::after {
+  content: ' ';
+  height: 3px;
+  width: 60%;
+  background-color: black;
+}

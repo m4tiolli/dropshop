@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+body {
+  background-image: url("../img/fundo_cadastro.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#contentDiv {
+  width: 30%;
+  height: 20em;
+  margin-left: 10em;
+  margin-top: 7em;
+  display: grid;
+  grid-template-rows: 3;
+}
+#contentDiv > h1,
+#contentDiv > #button,
+#contentDiv > p {
+  display: grid;
+}
+#contentDiv > h1 {
+  grid-row: 1;
+  font-family: 'Poppins';
+  font-weight: 400;
+  text-align: center;
+  color: white;
+}
+#contentDiv > p {
+  grid-row: 2;
+  font-family: 'Poppins';
+  font-weight: 300;
+  text-align: left;
+  color: white;
+}
+#contentDiv > #button {
+  grid-row: 3;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  height: 5em;
+}
+
+#button > a {
+    text-decoration: none;
+    padding: 10px 10px;
+    background: linear-gradient(90deg, rgba(41,21,3,1) 0%, rgba(96,63,37,1) 78%, rgba(138,95,63,1) 100%);
+    box-shadow: 4px 3px 20px black;
+    width: 70%;
+    height: 40%;
+    margin: auto;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    color: #fff;
+    border-radius: 130px;
+}
+#button > a:hover {
+    width: 72%;
+    height: 45%;
+    font-size: 1.2em;
+    transition: .2s ease-out;
+}

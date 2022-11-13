@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/card.css" />
+  </head>
+  <body>
+    <section class="product" id="camisas">
+      <h2 class="product-category">camisas e camisetas</h2>
+      <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
+      <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
+      <div class="product-container">
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/1.png" class="product-thumb" alt="" />
+            <button class="card-btn">adicionar ao carrinho</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Camiseta branca Adidas</h2>
+            <p class="product-short-description">
+              Camisa branca da marca Adidas, modelagem justa, gola canelada, malha 100% algodão.
+            </p>
+            <span class="price">R$99,90</span><span class="actual-price">$R$119,90</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/2.png" class="product-thumb" alt="" />
+            <button class="card-btn">adicionar ao carrinho</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Camiseta polo Puma</h2>
+            <p class="product-short-description">
+              Camiseta polo Puma preta, modelagem justa, gola polo, malha 100% algodão.
+            </p>
+            <span class="price">R$85,90</span><span class="actual-price">R$105,60</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/3.png" class="product-thumb" alt="" />
+            <button class="card-btn">adicionar ao carrinho</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Camisa listrada colorida</h2>
+            <p class="product-short-description">
+              Camisa colorida com botões, modelagem solta, malha 95% poliéster e 5% elastano, casual, ajuste regular.            </p>
+            <span class="price">R$49,90</span><span class="actual-price">R$69,90</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">20% off</span>
+            <img src="img/card/4.png" class="product-thumb" alt="" />
+            <button class="card-btn">adicionar ao carrinho</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Camisa social masculina</h2>
+            <p class="product-short-description">
+              Camisa com botões, modelagem justa, malha 95% poliéster e 5% elastano, ajuste regular.            </p>
+            <span class="price">R$79,90</span><span class="actual-price">R$99,90</span>
+          </div>
+        </div>
+    </section>
+    <script>
+      const productContainers = [
+        ...document.querySelectorAll(".product-container"),
+      ];
+      const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
+      const preBtn = [...document.querySelectorAll(".pre-btn")];
+
+      productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+
+        nxtBtn[i].addEventListener("click", () => {
+          item.scrollLeft += containerWidth;
+        });
+
+        preBtn[i].addEventListener("click", () => {
+          item.scrollLeft -= containerWidth;
+        });
+      });
+    </script>
+  </body>
+</html>

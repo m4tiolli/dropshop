@@ -1,0 +1,198 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(../fonts/Manrope-VariableFont_wght.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 5em;
+  background-color: white;
+  display: flex;
+}
+
+#divLogo, #divBusca, #divLogin {
+  display: flex;
+}
+
+img[src="img/logo.png"] {
+  width:7em;
+  height: auto;
+}
+
+.fa-magnifying-glass {
+  cursor: pointer;
+  font-size: 18pt;
+  position: absolute;
+  left: 58%;
+  top: 1.1em
+}
+
+#divLogo {
+  width: 20%;
+}
+
+#busca {
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 20em;
+  height: 2em;
+  margin: auto;
+}
+
+#divBusca {
+  width: 80%;
+}
+
+#divLogin {
+  width: 20%;
+}
+
+.inputres {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 50px;
+  font-size: 14pt;
+  padding: 5px;
+  font-family: Roboto;
+}
+
+.logent {
+  font-family: Manrope;
+  font-size: 12pt;
+  color: black;
+  background: none;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  margin: auto;
+  width: 3em;
+}
+
+.logent:hover {
+  color: #c9a34f;
+  text-decoration: underline;
+}
+
+form {
+  position: fixed;
+  left: 93%;
+  top: 1.5em;
+  z-index: 999;
+}
+input{
+  width: 100%;
+}
+
+.menu {
+  list-style: none;
+  font-family: Poppins;
+  text-transform: uppercase;
+  font-size: 14pt;
+  position: absolute;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.menu li {
+  position: relative;
+  padding: 0px 10px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+.menu li a:hover {
+  background: none;
+  color: #c9a34f;
+}
+
+.menu li ul {
+  position: absolute;
+  top: 30px;
+  padding-bottom: 5px;
+  background-color: black;
+  display: none;
+  font-size: 12pt;
+  text-transform: none;
+  font-family: Roboto;
+  text-align: center;
+  width: 11em;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+  display: block;
+}
+
+.menu li ul li {
+  display: block;
+  width: 70px;
+}
+
+nav {
+  width: 100%;
+  height: 75px;
+  background: black;
+  text-align: center;
+  margin: auto;
+}
+
+.txtprincipal:hover {
+  background: none;
+  color: gold;
+}
+
+.menu .icon {
+  display: none;
+}
+#confirmacao {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  color: white;
+  transition: .1s;
+  text-align: center;
+  font-family: Poppins;
+  opacity: 1;
+}
+.fa-close {
+  font-size: 1.5em;
+  position: absolute;
+  top: 150px;
+  left: 97%;
+  cursor: pointer;
+}
+#confirmacao > p > a {
+  text-decoration: none;
+  color: white;
+}
+#confirmacao > p > a:hover {
+  text-decoration: underline;
+}

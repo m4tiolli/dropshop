@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+body {
+  background-image: url("../img/fundo_cadastro.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#mensagem {
+  font-family: Poppins;
+  font-size: 10pt;
+  color: white;
+  background-color: black;
+  width: 20em;
+  height: 5em;
+  text-align: center;
+  position: fixed;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: opacity 200ms ease-in;
+  z-index: 99999;
+  border-radius: 20px;
+  left: 42%;
+  top: 5px;
+}
+
+.content {
+  background-color: #fff;
+  width: 35em;
+  height: 40em;
+  margin: 5% auto;
+  display: block;
+  text-align: center;
+  border-radius: 2em;
+}
+
+img {
+  margin-top: 2em;
+  height: 8em;
+}
+
+h2 {
+  font-family: "Poppins";
+  font-weight: lighter;
+  font-size: 1.5em;
+}
+h2::after {
+  content: " ";
+  display: block;
+  width: 50%;
+  margin: auto;
+  height: 1px;
+  margin-top: 5px;
+  background: #616161;
+}
+
+:focus {
+  outline: none;
+}
+.col-3 {
+  width: 60%;
+  margin: 40px auto;
+  position: relative;
+}
+input[type="text"],
+input[type="password"] {
+  font: 15px/24px "Roboto";
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+.effect-17 {
+	border: 0;
+	padding: 4px 0;
+	border-bottom: 1px solid #ccc;
+	background-color: transparent;
+}
+
+.effect-17~.focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background-color: #805a2e;
+	transition: 0.4s;
+}
+.effect-17:focus~.focus-border,
+.has-content.effect-17~.focus-border {
+	width: 100%;
+	transition: 0.4s;
+	left: 0;
+}
+.effect-17~label {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 9px;
+	color: #aaa;
+	transition: 0.3s;
+	z-index: -1;
+	letter-spacing: 0.5px;
+}
+.effect-17:focus~label,
+.has-content.effect-17~label {
+	top: -16px;
+	font-size: 12px;
+	color: #805a2e;
+	transition: 0.3s;
+}
+.fa-eye {
+  position: absolute;
+  top: 0.8em;
+  right: 0.5em;
+  cursor: pointer;
+}
+
+.buttonlogin,
+.buttonsenha {
+  margin: auto;
+  border-radius: 5em;
+  padding: 1em 1em;
+  font-family: "Manrope";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: none;
+}
+
+.buttonlogin {
+  width: 45%;
+  background-color: #805a2e;
+  font-size: 1em;
+  font-weight: bolder;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  transition: .1s;
+}
+
+.buttonlogin:hover {
+  background-color: #8d673c;
+}
+
+.buttonlogin:active {
+  background-color: #684722;
+}
+
+.buttonsenha {
+  width: 35%;
+  background-color: #53391b;
+  font-size: 0.6em;
+  font-weight: lighter;
+  margin-bottom: 1em;
+  transition: .1s;
+}
+
+.buttonsenha:hover {
+  background-color: #664826;
+}
+
+.buttonsenha:active {
+  background-color: #422d14;
+}
+
+.link {
+  width: 100% -1em;
+  border-radius: 0em 0em 2em 2em;
+  background-color: #53391b;
+  text-align: center;
+  padding: 1em 1em;
+  font-family: "Poppins";
+  font-weight: bolder;
+  color: #130c07;
+}
+
+a {
+  color: #2b1c0f;
+}
+
+#msgsenha {
+  font-family: 'Poppins';
+  line-height: 1.3em;
+  font-weight: 700;
+  padding: 2em;
+  width: 40%;
+  background-color: rgb(79, 161, 54);
+  color: rgb(36, 88, 20);
+  border-radius: 15px; 
+  text-align: center;
+  top: 1em;
+  margin: auto;
+  display: block;
+}

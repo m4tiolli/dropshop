@@ -1,0 +1,21 @@
+<head>
+  <link rel="stylesheet" href="css/loader.css" />
+</head>
+
+<body>
+  <div id="overlayer"></div>
+  <div class="preloader">
+    <div class="loader">
+      <span class="loader-inner"></span>
+    </div>
+    <p>Loading...</p>
+  </div>
+
+  <script>
+    $(window).load(function () {
+      $(".preloader").delay(2000).fadeOut("slow");
+      $("#overlayer").delay(2000).fadeOut("slow");
+    });
+  </script>
+  <div id="headerDiv"></div>
+</body>
