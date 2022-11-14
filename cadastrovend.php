@@ -11,7 +11,7 @@ $campos = "nome, cidade, bairro, rua, numcasa, cep, uf, cnpj, email, senha";
 
 if (isset($_POST['cadastrar'])) {
 
-  $nomeF = $_POST['nome'];
+  $nomeF = ucwords($_POST['nome']);
   $cidadeF = $_POST['cidade'];
   $bairroF = $_POST['bairro'];
   $ruaF = $_POST['rua'];

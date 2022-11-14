@@ -5,7 +5,7 @@ include_once("conexao.php");
 mysqli_set_charset($conexao, "utf8");
 
 if (isset($_POST['entrar'])) {
-  $emailF = $_POST['email'];
+  $emailF = strtolower($_POST['email']);
   $entrarF = $_POST['entrar'];
   $senhaF = $_POST['senha'];
 }
