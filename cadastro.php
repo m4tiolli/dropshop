@@ -57,7 +57,6 @@ if (isset($_POST['cadastrar'])) {
   <script src="https://kit.fontawesome.com/6e68b6b4aa.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="js/cadastro.js"></script>
 </head>
 
@@ -73,35 +72,19 @@ if (isset($_POST['cadastrar'])) {
             <span class="focus-border"></span>
           </div>
           <div class="col-3">
-            <input class="effect-1" type="text" placeholder="Digite seu CPF" name="cpf" id="CPFInput" oninput="criaMascara('CPF')" onblur="validarCPF(this)" maxlength="11" required>
-            <span class="focus-border"></span>
-          </div>
-          <div class="col-3">
-            <input class="effect-1" type="text" oninput="data(this)" onblur="validardata(this)" name="data_nasc" placeholder="Digite sua data de nascimento" required>
-            <span class="focus-border"></span>
-          </div>
-          <script>
-            function data(i) {
-
-              var v = i.value;
-
-              if (isNaN(v[v.length - 1])) {
-                i.value = v.substring(0, v.length - 1);
-                return;
-              }
-
-              i.setAttribute("maxlength", "10");
-              if (v.length == 2) i.value += "/";
-              if (v.length == 5) i.value += "/";
-              if (v.length == 6) i.value += "/";
-            }
-          </script>
-          <div class="col-3">
-            <input class="effect-1" type="text" placeholder="Digite seu telefone" name="telefone" id="CelularInput" oninput="criaMascara('Celular')" maxlength="11" required>
+            <input class="effect-1" type="text" placeholder="Digite seu CPF" name="cpf" id="CPFInput" oninput="valcpf(this)" onblur="validarCPF(this)" required>
             <span class="focus-border"></span>
           </div>
           <div class="col-3">
             <input class="effect-1" type="text" placeholder="Digite seu CEP" name="cep" id="CEPInput" oninput="mascara(this)" required>
+            <span class="focus-border"></span>
+          </div>
+          <div class="col-3">
+            <input class="effect-1" type="text" oninput="data(this)" onblur="validadata(this)" name="data_nasc" placeholder="Digite sua data de nascimento" required>
+            <span class="focus-border"></span>
+          </div>
+          <div class="col-3">
+            <input class="effect-1" type="text" placeholder="Digite seu telefone" name="telefone" id="CelularInput" oninput="tel(this)" required>
             <span class="focus-border"></span>
           </div>
         </div>
@@ -160,11 +143,11 @@ if (isset($_POST['cadastrar'])) {
       </div>
       <div class="three">
         <div class="col-3">
-          <input class="effect-1" type="text" placeholder="Digite um email válido" name="email" required>
+          <input class="effect-1" type="text" placeholder="Digite um email válido" name="email" onblur="validacaoEmail(this)" required>
           <span class="focus-border"></span>
         </div>
         <div class="col-3">
-          <input class="effect-1" type="password" placeholder="Digite uma senha válida" name="senha" id="senha" required>
+          <input class="effect-1" type="password" placeholder="Digite uma senha válida" name="senha" id="senha" pattern="[^. ][A-Za-z0-9.]*[^. ][@][A-Za-z0-9.]*[^. ]" required>
           <span class="fa-regular fa-eye" id="olho"></span>
           <span class="focus-border"></span>
         </div>
@@ -194,31 +177,54 @@ if (isset($_POST['cadastrar'])) {
   }
 </script>
 <script>
-  function criaMascara(mascaraInput) {
-    const maximoInput = document.getElementById(
-      `${mascaraInput}Input`
-    ).maxLength;
-    let valorInput = document.getElementById(`${mascaraInput}Input`).value;
-    let valorSemPonto = document
-      .getElementById(`${mascaraInput}Input`)
-      .value.replace(/([^0-9])+/g, "");
-    const mascaras = {
-      CPF: valorInput
-        .replace(/[^\d]/g, "")
-        .replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"),
-      Celular: valorInput.replace(/[^\d]/g, "").replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"),
-      CEP: valorInput
-        .replace(/[^\d]/g, "")
-        .replace(/(\d{5})(\d{3})/, "$1-$2"),
-    };
+  function data(i) {
 
-    valorInput.length === maximoInput ?
-      (document.getElementById(`${mascaraInput}Input`).value =
-        mascaras[mascaraInput]) :
-      (document.getElementById(`${mascaraInput}Input`).value =
-        valorSemPonto);
+    var v = i.value;
+
+    if (isNaN(v[v.length - 1])) {
+      i.value = v.substring(0, v.length - 1);
+      return;
+    }
+
+    i.setAttribute("maxlength", "10");
+    if (v.length == 2) i.value += "/";
+    if (v.length == 5) i.value += "/";
+    if (v.length == 6) i.value += "/";
   }
 </script>
+<script>
+  function valcpf(j) {
+
+    var v = j.value;
+
+    if (isNaN(v[v.length - 1])) {
+      j.value = v.substring(0, v.length - 1);
+      return;
+    }
+
+    j.setAttribute("maxlength", "14");
+    if (v.length == 3) j.value += ".";
+    if (v.length == 7) j.value += ".";
+    if (v.length == 11) j.value += "-";
+  }
+</script>
+
+<script>
+  function tel(j) {
+
+    var v = j.value;
+
+    if (isNaN(v[v.length - 1])) {
+      j.value = v.substring(0, v.length - 1);
+      return;
+    }
+
+    j.setAttribute("maxlength", "13");
+    if (v.length == 2) j.value += " ";
+    if (v.length == 8) j.value += "-";
+  }
+</script>
+
 <script type="text/javascript">
   $("#CEPInput").focusout(function() {
     $.ajax({
@@ -296,36 +302,55 @@ if (isset($_POST['cadastrar'])) {
 </script>
 
 <script>
-  function validadata() {
-    var data = document.getElementById("data_nasc").value; // pega o valor do input
-    data = data.replace(/\//g, "-"); // substitui eventuais barras (ex. IE) "/" por hífen "-"
-    var data_array = data.split("-"); // quebra a data em array
+  function validadata(a) {
+    var data = a.value;
+    var data_array = data.split("/");
 
-    // para o IE onde será inserido no formato dd/MM/yyyy
-    if (data_array[0].length != 4) {
-      data = data_array[2] + "-" + data_array[1] + "-" + data_array[0]; // remonto a data no formato yyyy/MM/dd
+    var date = new Date();
+    var newano = date.getFullYear();
+    var newmes = date.getMonth() + 1;
+    var newdia = date.getDate();
+    var newall = (newano * 365) + (newmes * 30) + newdia;
+
+    var dia = parseInt(data_array[0]);
+    var mes = parseInt(data_array[1]);
+    var ano = parseInt(data_array[2]);
+    var all = dia + (mes * 30) + (ano * 365);
+
+    if (newall - all < 6570) {
+      var alerta = "Apenas maiores de idade podem se cadastrar!";
+      var i = false;
     }
 
-    // comparo as datas e calculo a idade
-    var hoje = new Date();
-    var nasc = new Date(data);
-    var idade = hoje.getFullYear() - nasc.getFullYear();
-    var m = hoje.getMonth() - nasc.getMonth();
-    if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
-
-    if (idade < 18) {
-      alert(false);
+    if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano < 1940) {
+      var i = false;
+      var alerta = "Data inválida";
     }
-
-    if (idade >= 18 && idade <= 60) {
-      alert(true);
+    if (i == false) {
+      alert(alerta);
+      a.value = "";
     }
-
-    // se for maior que 60 não vai acontecer nada!
-    alert(false);
   }
+</script>
 
-  
+<script>
+  function validacaoEmail(field) {
+    usuario = field.value.substring(0, field.value.indexOf("@"));
+    dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+
+    if ((usuario.length >= 1) &&
+      (dominio.length >= 3) &&
+      (usuario.search("@") == -1) &&
+      (dominio.search("@") == -1) &&
+      (usuario.search(" ") == -1) &&
+      (dominio.search(" ") == -1) &&
+      (dominio.search(".") != -1) &&
+      (dominio.indexOf(".") >= 1) &&
+      (dominio.lastIndexOf(".") < dominio.length - 1)) {} else {
+      alert("E-mail invalido");
+      field.value = "";
+    }
+  }
 </script>
 
 </html>
