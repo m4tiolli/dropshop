@@ -57,7 +57,6 @@ if (isset($_POST['cadastrar'])) {
   <script src="https://kit.fontawesome.com/6e68b6b4aa.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-  <script src="js/cadastro.js"></script>
 </head>
 
 <body>
@@ -147,7 +146,7 @@ if (isset($_POST['cadastrar'])) {
           <span class="focus-border"></span>
         </div>
         <div class="col-3">
-          <input class="effect-1" type="password" placeholder="Digite uma senha válida" name="senha" id="senha" pattern="[^. ][A-Za-z0-9.]*[^. ][@][A-Za-z0-9.]*[^. ]" required>
+          <input class="effect-1" type="password" placeholder="Digite uma senha válida" name="senha" id="senha" minlength="8" required>
           <span class="fa-regular fa-eye" id="olho"></span>
           <span class="focus-border"></span>
         </div>
@@ -236,7 +235,6 @@ if (isset($_POST['cadastrar'])) {
         $("#bairro").val(resposta.bairro);
         $("#cidade").val(resposta.localidade);
         $("#uf").val(resposta.uf);
-        $("#numcasa").focus();
       },
     });
   });

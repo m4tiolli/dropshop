@@ -22,9 +22,9 @@ session_start();
     <div class="content">
         <img src="img/logo.png" alt="">
         <h2>Esqueceu a Senha?</h2>
-        <form action="configesqsenha.php" method="POST" autocomplete="off">
+        <form action="configesqsenhavend.php" method="POST" autocomplete="off">
             <div class="col-3 input-effect">
-                <input class="effect-17" type="text" placeholder="Digite seu CPF" oninput="mascara(this)" name="cpf">
+                <input class="effect-17" type="text" placeholder="Digite seu CNPJ" oninput="mascara(this)" name="cnpj">
                 <span class="focus-border"></span>
             </div>
             <div class="col-3 input-effect">
@@ -44,16 +44,18 @@ session_start();
     <script>
         function mascara(i) {
 
-            var v = i.value;
+            var v = j.value;
 
             if (isNaN(v[v.length - 1])) {
-                i.value = v.substring(0, v.length - 1);
+                j.value = v.substring(0, v.length - 1);
                 return;
             }
 
-            i.setAttribute("maxlength", "14");
-            if (v.length == 3 || v.length == 7) i.value += ".";
-            if (v.length == 11) i.value += "-";
+            j.setAttribute("maxlength", "18");
+            if (v.length == 2) j.value += ".";
+            if (v.length == 6) j.value += ".";
+            if (v.length == 10) j.value += "/";
+            if (v.length == 15) j.value += "-";
 
         }
     </script>

@@ -11,10 +11,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/6e68b6b4aa.js" crossorigin="anonymous"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script  src="js/login.js"></script>
+    <script src="js/login.js"></script>
 </head>
 
 <body>
+    <div id="msgbox">
+        <?php
+        if (isset($_SESSION['msg'])) {
+            echo $_SESSION['msg'];
+            $_SESSION['msg'] == "";
+            session_destroy();
+        }
+        ?>
+
+        <script>
+            setTimeout(function() {
+                $('#msgbox').fadeOut("slow");
+            }, 5000);
+        </script>
+    </div>
     <div class="content">
         <img src="img/logo.png" alt="">
         <h2>Login</h2>
@@ -29,13 +44,25 @@
                 <span class="focus-border"></span>
             </div>
             <input class="buttonlogin" type="submit" name="entrar" value="Entrar"><br>
-            <button class="buttonsenha" name="esqsenha">Esqueceu a senha?</button>
+            <a class="buttonsenha" href="esqsenhavend.php">Esqueceu a senha?</a>
             <p class="link">
                 Não tem conta?
                 <a href="cadastro.php"> Ir para Cadastro </a>
             </p>
         </form>
     </div>
+    <?php
+    if (isset($_SESSION['altersenha'])) {
+        echo $_SESSION['altersenha'];
+        $_SESSION['altersenha'] == "";
+        session_destroy();
+    }
+    ?>
+    <script>
+        setTimeout(function() {
+            $('#msgsenha').fadeOut("slow");
+        }, 5000);
+    </script>
 
     <script>
         var senha = $('#senha');

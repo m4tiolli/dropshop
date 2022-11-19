@@ -1,11 +1,11 @@
 <?php
 session_start();
-	if (isset($_SESSION['msgv'])) {
-		if ($_SESSION['msgv'] === "<p id='mensagem'>Usuário ou senha incorretos<p>") {
-			$_SESSION['msgv'] == "";
+	if (isset($_SESSION['msg'])) {
+		if ($_SESSION['msg'] === "<p id='mensagem'>Usuário ou senha incorretos<p>") {
+			$_SESSION['msg'] == "";
 			session_destroy();
 		} else {
-			$msg = $_SESSION['msgv'];
+			$msg = $_SESSION['msg'];
 		}
 	} else {
 		$msg = "Olá, vendedor!";
@@ -40,7 +40,7 @@ session_start();
     <div id="contentDiv">
         <h1>DropShop</h1>
         <p>&nbsp;&nbsp;&nbsp;<?php echo $msg; ?> Se deseja cadastrar algum de seu produto em nosso site, cadastre pelo botão logo abaixo:</p>
-        <div id="button"><?php echo $show; ?>></div>
+        <div id="button"><?php echo $show; ?></div>
     </div>
     <div id="footerDiv"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

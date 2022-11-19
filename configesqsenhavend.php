@@ -7,19 +7,19 @@ mysqli_set_charset($conexao, "utf8");
 if (isset($_POST['enviar'])) {
   $emailF = $_POST['email'];
   $enviarF = $_POST['enviar'];
-  $cpfF = $_POST['cpf'];
+  $cnpjF = $_POST['cnpj'];
 }
 
-$sqlverifica = "SELECT * FROM cliente WHERE email =
-    '$emailF' AND cpf = '$cpfF'";
+$sqlverifica = "SELECT * FROM vendedor WHERE email =
+    '$emailF' AND cnpj = '$cnpjF'";
 $resultadoverifica = @mysqli_query($conexao, $sqlverifica);
 
 if (mysqli_num_rows($resultadoverifica) == 1) {
   setcookie("redefinir", $emailF);
   $_SESSION['email'] = $emailF;
-  $_SESSION['cpf'] = $cpfF;
-  header("Location: esqsenhanext.php");
+  $_SESSION['cnpj'] = $cnpjF;
+  header("Location: esqsenhanextvend.php");
 } else {
   $_SESSION['text'] = "<p id='mensagem'>Não existe conta associada à esses dados.<p>";
-  header("Location: esqsenha.php");
+  header("Location: esqsenhavend.php");
 }
