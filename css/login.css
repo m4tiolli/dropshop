@@ -125,7 +125,6 @@ input[type="password"] {
 
 .buttonlogin,
 .buttonsenha {
-  margin: auto;
   border-radius: 5em;
   padding: 1em 1em;
   font-family: "Manrope";
@@ -154,11 +153,11 @@ input[type="password"] {
 }
 
 .buttonsenha {
-  width: 35%;
+  width: 40%;
   background-color: #53391b;
   font-size: 0.6em;
   font-weight: lighter;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   transition: .1s;
 }
 
@@ -179,10 +178,11 @@ input[type="password"] {
   font-family: "Poppins";
   font-weight: bolder;
   color: #130c07;
+  margin-top: 10%;
 }
 
 a {
-  color: #2b1c0f;
+  color: #2b1c0f !important
 }
 
 #msgsenha {
