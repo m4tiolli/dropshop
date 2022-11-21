@@ -83,10 +83,10 @@ session_start();
 		$(function() {
 			$("#headerDiv").load("header.php");
 			$("#footerDiv").load("footer.html");
-			$("#cardDiv1").load("card1.html");
-			$("#cardDiv2").load("card2.html");
-			$("#cardDiv3").load("card3.html");
-			$("#cardDiv4").load("card4.html");
+			$("#cardDiv1").load("card1.php");
+			$("#cardDiv2").load("card2.php");
+			$("#cardDiv3").load("card3.php");
+			$("#cardDiv4").load("card4.php");
 		});
 	</script>
 </body>

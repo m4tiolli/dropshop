@@ -38,9 +38,7 @@ img[src="img/logo.png"] {
 .fa-magnifying-glass {
   cursor: pointer;
   font-size: 18pt;
-  position: absolute;
-  left: 58%;
-  top: 1.1em
+  position: relative;
 }
 
 #divLogo {
