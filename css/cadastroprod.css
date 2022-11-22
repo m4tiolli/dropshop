@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/fundo_cadastro.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#content {
+  height: 100em;
+  width: 55%;
+  margin: auto;
+  background-color: beige;
+  padding-top: 1em;
+  border-radius: 2em;
+}
+
+h2 {
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+.img-container {
+  position: relative;
+  border: 1px solid #000;
+  overflow: hidden;
+  width: 400px;
+}
+.img-container img {
+  max-width: 100%;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.img-container:hover img {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
