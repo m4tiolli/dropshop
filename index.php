@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+if(isset($_SESSION['msgv'])){
+	session_destroy();
+	if(isset($_COOKIE['emailv'])){
+		setcookie("emailv", "", time() - 3600);
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

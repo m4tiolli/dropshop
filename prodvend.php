@@ -1,11 +1,22 @@
 <?php header("Content-type: text/html; charset=utf-8");
 include('conexao.php');
+session_start();
 mysqli_set_charset($conexao, "utf8");
-$sql = 'SELECT * FROM produto';
+if(isset($_SESSION['emailv']) && isset($_SESSION['senhav'])){
+$emailv = $_SESSION['emailv'];
+$senhav = $_SESSION['senhav'];
+} else {
+  $emailv = "";
+  $senhav = "";
+}
+$sqlid = "SELECT id FROM vendedor WHERE email = '$emailv' AND senha = '$senhav'";
+$id = mysqli_query($conexao, $sqlid);
+$var = mysqli_fetch_array($id);
+$id_vend = intval($var[0]);
+
+$sql = "SELECT * FROM produto WHERE id_vend = '$id_vend'";
 $result = mysqli_query($conexao, $sql);
 mysqli_close($conexao);
-
-$linhas = mysqli_num_rows($result);
 
 ?>
 <!DOCTYPE html>
@@ -51,7 +62,7 @@ $linhas = mysqli_num_rows($result);
       <h2 class="product-brand">' . $show['nome'] . '</h2>
       <p class="product-short-description">
         ' . $show['descricao'] . ' </p>
-      <span class="price">R$' . number_format($desconto, 2, ',', '.') . '</span><span class="actual-price">R$' .  number_format($show['pr_venda'], 2, ',', '.') . '</span>
+      <span class="price">R$' . $desconto . '</span><span class="actual-price">R$' .  $show['pr_venda'] . '</span>
     </div>
   </div>';
       }

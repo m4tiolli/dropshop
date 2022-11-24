@@ -23,15 +23,15 @@ if (isset($entrarF)) {
   }
 
   if (mysqli_num_rows($resultadoverifica) != 0) {
-    if (!isset($_COOKIE['email'])) {
-      setcookie("email", $emailF);
+    if (!isset($_COOKIE['emailv'])) {
+      setcookie("emailv", $emailF);
     }
-    $_SESSION['msg'] = "Olá, ".$show."!";
+    $_SESSION['msgv'] = "Olá, ".$show."!";
     header("Location: indexvend.php");
+    $_SESSION['emailv'] = $emailF;
+    $_SESSION['senhav'] = $senhaF;
   } else {
-    $_SESSION['msg'] = "<p>Usuário ou senha incorretos<p>";
-    header("Location: indexvend.php");
-    die();
-    session_destroy();
+    $_SESSION['msgv'] = "<p>Usuário ou senha incorretos<p>";
+    header("Location: fazerloginvend.php");
   }
 }

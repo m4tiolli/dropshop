@@ -14,6 +14,17 @@ $linhas = mysqli_num_rows($result);
 <head>
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/card.css" />
+  <style>
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+  <meta charset="utf-8">
 </head>
 
 <body>
@@ -33,13 +44,13 @@ $linhas = mysqli_num_rows($result);
 <span class="discount-tag">20% off</span>
 <img src="' . $show["imagem1"] . '" class="product-thumb" alt="" />
 
-<button class="card-btn">adicionar ao carrinho</button>
+<button class="card-btn"><a href="' . $show['site_compra'] . '">ir ao site</a></button>
 </div>
 <div class="product-info">
 <h2 class="product-brand">' . $show['nome'] . '</h2>
 <p class="product-short-description">
   ' . $show['descricao'] . ' </p>
-<span class="price">R$' . $desconto . '</span><span class="actual-price">R$' .  $show['pr_venda'] . '</span>
+  <span class="price">R$' . number_format($desconto, 2, ',', '.') . '</span><span class="actual-price">R$' .  number_format($show['pr_venda'], 2, ',', '.') . '</span>
 </div>
 </div>';
       }

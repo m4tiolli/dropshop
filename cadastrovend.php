@@ -31,12 +31,12 @@ if (isset($_POST['cadastrar'])) {
     die('Algo deu errado: ' . mysqli_error($conexao));
   } else {
     mysqli_close($conexao);
-    $_SESSION['email'] = $emailF;
-    $_SESSION['senha'] = $senhaF;
-    $_SESSION['nome'] = $nomeF;
+    $_SESSION['emailv'] = $emailF;
+    $_SESSION['senhav'] = $senhaF;
+    $_SESSION['nomev'] = $nomeF;
     header('Location: indexvend.php');
-    $_SESSION['msg'] = "Olá, " . $nomeF . "!";
-    setcookie("email", $emailF);
+    $_SESSION['msgv'] = "Olá, " . $nomeF . "!";
+    setcookie("emailv", $emailF);
     exit;
   }
 }

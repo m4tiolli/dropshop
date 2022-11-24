@@ -12,7 +12,7 @@
         </div>
         <div id="divLogin">
             <?php
-            if (isset($_COOKIE["email"])) {
+            if (isset($_COOKIE["emailv"])) {
                 $mostrar = "<a class='logent' id='caditem' href='cadprod.php'>Cadastrar Item</a>";
             } else {
                 $mostrar = "<a class='logent' id='log' href='fazerloginvend.php'>Entrar</a>";
@@ -20,11 +20,12 @@
             echo $mostrar;
             ?>
             <?php
-            if (isset($_COOKIE["email"])) {
+            if (isset($_COOKIE["emailv"])) {
                 $mostrar2 = "<form method='POST' action='deslogavend.php'><input class='logent' id='ent' href='' type='submit' name='desloga' value='SAIR'></form>";
             } else {
                 $mostrar2 = "<a class='logent' id='ent' href='cadastrovend.php'>Criar Conta</a>";
             }
+            echo $mostrar3 = "<a class='logent' id='ent' href='prodvend.php'>Meus Produtos</a>";
             echo $mostrar2;
             ?>
         </div>

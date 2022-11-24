@@ -1,16 +1,16 @@
 <?php
 session_start();
-	if (isset($_SESSION['msg'])) {
-		if ($_SESSION['msg'] === "<p id='mensagem'>Usuário ou senha incorretos<p>") {
-			$_SESSION['msg'] == "";
+	if (isset($_SESSION['msgv'])) {
+		if ($_SESSION['msgv'] === "<p id='mensagem'>Usuário ou senha incorretos<p>") {
+			$_SESSION['msgv'] == "";
 			session_destroy();
 		} else {
-			$msg = $_SESSION['msg'];
+			$msg = $_SESSION['msgv'];
 		}
 	} else {
 		$msg = "Olá, vendedor!";
 	}
-    if(isset($_COOKIE['email'])){
+    if(isset($_COOKIE['emailv'])){
         $show = "<a href='cadastroprod.php'>CADASTRAR</a>";
     } else {
         $show = "<a href='cadastrovend.php'>CRIAR CONTA</a>";

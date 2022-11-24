@@ -14,10 +14,11 @@ body {
 }
 
 #content {
-  height: 100em;
+  margin-top: 2em;
+  height: fit-content;
   width: 55%;
   margin: auto;
-  background-color: beige;
+  background-color: #fff;
   padding-top: 1em;
   border-radius: 2em;
 }
@@ -25,23 +26,182 @@ body {
 h2 {
   text-align: center;
   font-family: Poppins;
-  font-weight: 400;
+  font-weight: lighter;
 }
 
-.img-container {
+h2::after {
+  content: " ";
+  height: 1px;
+  width: 60%;
+  background: #616161;
+  display: block;
+  margin: auto;
+  margin-top: 0.5em;
+}
+
+:focus {
+  outline: none;
+}
+.col-3 {
+  width: 100%;
+  margin: auto;
   position: relative;
-  border: 1px solid #000;
-  overflow: hidden;
-  width: 400px;
 }
-.img-container img {
-  max-width: 100%;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+input,
+select {
+  font: 15px/24px "Roboto";
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  margin-top: 1em;
 }
-.img-container:hover img {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+
+input[type='file']{
+  display: none;
+}
+
+#table {
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 2;
+  width: 80%;
+  margin: auto;
+  
+}
+
+label[for="imgInput1"]{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 50%;
+}
+label[for="imgInput2"]{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 50%;
+}
+label[for="imgInput3"]{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 50%;
+}
+
+img[id="view-img1"]{
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  width: 50%;
+  text-align: center;
+}
+img[id="view-img2"]{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  width: 50%;
+  text-align: center;
+}
+img[id="view-img3"]{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  width: 50%;
+  text-align: center;
+}
+
+img {
+  margin: auto;
+  margin-top: 1em;
+}
+
+label[for="imgInput1"], label[for="imgInput2"], label[for="imgInput3"] {
+  width: 65%;
+  background-color: #805a2e;
+  font-size: .7em;
+  font-weight: bolder;
+  margin-bottom: 1em;
+  margin-top: 3em;
+  transition: 0.1s;
+  margin: auto;
+  border-radius: 5em;
+  padding: 1em 1em;
+  font-family: "Manrope";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: none;
+}
+
+label[for="imgInput1"]:hover, label[for="imgInput2"]:hover, label[for="imgInput3"]:hover{
+  background-color: #8d673c;
+}
+
+label[for="imgInput1"]:active, label[for="imgInput2"]:active, label[for="imgInput3"]:active{
+  background-color: #684722;
+}
+
+.effect-1 {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+}
+.effect-1 ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #805a2e;
+  transition: 0.4s;
+}
+.effect-1:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
+
+form {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+select {
+  padding: 0.7em 0;
+  border: 1px solid #ccc;
+  outline: none;
+  color: #333;
+  background-color: transparent;
+}
+
+button {
+  margin: auto;
+  border-radius: 5em;
+  padding: 1em 1em;
+  font-family: "Manrope";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: none;
+}
+button[name="cadastrar"] {
+  width: 65%;
+  background-color: #805a2e;
+  font-size: 1em;
+  font-weight: bolder;
+  margin-bottom: 1em;
+  margin-top: 3em;
+  transition: 0.1s;
+}
+button[name="cadastrar"]:hover {
+  background-color: #8d673c;
+}
+button[name="cadastrar"]:active {
+  background-color: #684722;
 }
