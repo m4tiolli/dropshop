@@ -14,7 +14,7 @@ body {
 }
 
 #content {
-  margin-top: 2em;
+  margin-top: 2em !important;
   height: fit-content;
   width: 55%;
   margin: auto;
@@ -57,7 +57,7 @@ select {
   margin-top: 1em;
 }
 
-input[type='file']{
+input[type="file"] {
   display: none;
 }
 
@@ -67,24 +67,23 @@ input[type='file']{
   grid-template-rows: 2;
   width: 80%;
   margin: auto;
-  
 }
 
-label[for="imgInput1"]{
+label[for="imgInput1"] {
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
   width: 50%;
 }
-label[for="imgInput2"]{
+label[for="imgInput2"] {
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 1;
   width: 50%;
 }
-label[for="imgInput3"]{
+label[for="imgInput3"] {
   grid-column-start: 3;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -92,7 +91,7 @@ label[for="imgInput3"]{
   width: 50%;
 }
 
-img[id="view-img1"]{
+img[id="view-img1"] {
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 2;
@@ -100,7 +99,7 @@ img[id="view-img1"]{
   width: 50%;
   text-align: center;
 }
-img[id="view-img2"]{
+img[id="view-img2"] {
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -108,7 +107,7 @@ img[id="view-img2"]{
   width: 50%;
   text-align: center;
 }
-img[id="view-img3"]{
+img[id="view-img3"] {
   grid-column-start: 3;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -122,10 +121,12 @@ img {
   margin-top: 1em;
 }
 
-label[for="imgInput1"], label[for="imgInput2"], label[for="imgInput3"] {
+label[for="imgInput1"],
+label[for="imgInput2"],
+label[for="imgInput3"] {
   width: 65%;
   background-color: #805a2e;
-  font-size: .7em;
+  font-size: 0.7em;
   font-weight: bolder;
   margin-bottom: 1em;
   margin-top: 3em;
@@ -140,11 +141,15 @@ label[for="imgInput1"], label[for="imgInput2"], label[for="imgInput3"] {
   border: none;
 }
 
-label[for="imgInput1"]:hover, label[for="imgInput2"]:hover, label[for="imgInput3"]:hover{
+label[for="imgInput1"]:hover,
+label[for="imgInput2"]:hover,
+label[for="imgInput3"]:hover {
   background-color: #8d673c;
 }
 
-label[for="imgInput1"]:active, label[for="imgInput2"]:active, label[for="imgInput3"]:active{
+label[for="imgInput1"]:active,
+label[for="imgInput2"]:active,
+label[for="imgInput3"]:active {
   background-color: #684722;
 }
 
@@ -204,4 +209,46 @@ button[name="cadastrar"]:hover {
 }
 button[name="cadastrar"]:active {
   background-color: #684722;
+}
+
+.error {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.erro {
+  font-family: "Poppins";
+  line-height: 1.3em;
+  font-weight: 700;
+  padding: 3em;
+  width: 40%;
+  background-color: #e45555;
+  color: rgb(128, 32, 32);
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 30%;
+}
+
+.link {
+  color: rgb(128, 32, 32);
+  text-decoration: none;
+}
+.link:hover {
+  color: rgb(59, 10, 10);
+  text-decoration: underline;
+}
+
+#erro {
+  font-family: "Poppins";
+  line-height: 1.3em;
+  font-weight: 700;
+  padding: 2em;
+  width: 40%;
+  background-color: #e45555;
+  color: rgb(128, 32, 32);
+  border-radius: 15px;
+  text-align: center;
+  top: 1em;
+  margin: auto;
 }

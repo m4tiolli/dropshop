@@ -23,13 +23,22 @@ $linhas = mysqli_num_rows($result);
     a:hover {
       color: #fff;
     }
+
+    .card-btn:hover a {
+      color: #fff;
+    }
+
+    .card-btn:hover {
+  background: #000;
+  color: #fff;
+}
   </style>
-  <meta charset="utf-8">
 </head>
 
 <body>
-  <section class="product" id="camisas">
-    <h2 class="product-category">camisas e camisetas</h2>
+
+  <section class="product" id="destaques">
+    <h2 class="product-category">destaques</h2>
     <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
     <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
     <div class="product-container">
@@ -39,20 +48,21 @@ $linhas = mysqli_num_rows($result);
         $desconto =  $show['pr_venda'] - ($show['pr_venda'] * 20 / 100);
         $nome = $show['nome'];
         echo '
-<div class="product-card">
-<div class="product-image">
-<span class="discount-tag">20% off</span>
-<img src="' . $show["imagem1"] . '" class="product-thumb" alt="" />
-
-<button class="card-btn"><a href="' . $show['site_compra'] . '">ir ao site</a></button>
-</div>
-<div class="product-info">
-<h2 class="product-brand">' . $show['nome'] . '</h2>
-<p class="product-short-description">
-  ' . $show['descricao'] . ' </p>
-  <span class="price">R$' . number_format($desconto, 2, ',', '.') . '</span><span class="actual-price">R$' .  number_format($show['pr_venda'], 2, ',', '.') . '</span>
-</div>
-</div>';
+       
+  <div class="product-card">
+    <div class="product-image">
+      <span class="discount-tag">20% off</span>
+      <img src="' . $show["imagem1"] . '" class="product-thumb" alt="" />
+      
+      <button class="card-btn"><a href="verproduto.php?id=' . $show['id'] . '">ver produto</a></button>
+    </div>
+    <div class="product-info">
+      <h2 class="product-brand">' . $show['nome'] . '</h2>
+      <p class="product-short-description">
+        ' . $show['descricao'] . ' </p>
+      <span class="price">R$' . number_format($desconto, 2, ',', '.') . '</span><span class="actual-price">R$' .  number_format($show['pr_venda'], 2, ',', '.') . '</span>
+    </div>
+  </div>';
       }
       ?>
   </section>

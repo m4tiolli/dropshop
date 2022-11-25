@@ -27,7 +27,7 @@ body {
   transition: opacity 200ms ease-in;
   z-index: 99999;
   border-radius: 20px;
-  left: 42%;
+  left: calc(50% - 10em);
   top: 5px;
 }
 

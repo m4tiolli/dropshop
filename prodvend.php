@@ -2,9 +2,9 @@
 include('conexao.php');
 session_start();
 mysqli_set_charset($conexao, "utf8");
-if(isset($_SESSION['emailv']) && isset($_SESSION['senhav'])){
-$emailv = $_SESSION['emailv'];
-$senhav = $_SESSION['senhav'];
+if (isset($_SESSION['emailv']) && isset($_SESSION['senhav'])) {
+  $emailv = $_SESSION['emailv'];
+  $senhav = $_SESSION['senhav'];
 } else {
   $emailv = "";
   $senhav = "";
@@ -14,7 +14,7 @@ $id = mysqli_query($conexao, $sqlid);
 $var = mysqli_fetch_array($id);
 $id_vend = intval($var[0]);
 
-$sql = "SELECT * FROM produto WHERE id_vend = '$id_vend'";
+$sql = "SELECT * FROM produto WHERE id_vendedor = $id_vend";
 $result = mysqli_query($conexao, $sql);
 mysqli_close($conexao);
 
@@ -24,8 +24,10 @@ mysqli_close($conexao);
 
 <head>
   <script src="js/script.js"></script>
-  <link rel="stylesheet" href="css/card.css" />
+  <link rel="stylesheet" href="css/produtos.css" />
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/6e68b6b4aa.js" crossorigin="anonymous"></script>
   <style>
     a {
       text-decoration: none;
@@ -40,23 +42,18 @@ mysqli_close($conexao);
 
 <body>
 
-  <section class="product" id="destaques">
-    <h2 class="product-category">destaques</h2>
-    <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
-    <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
-    <div class="product-container">
-      <?php
+  <h2 class="product-category">Seus Produtos</h2>
+  <div class="product-container">
+    <?php
 
-      foreach ($result as $show) {
-        $desconto =  $show['pr_venda'] - ($show['pr_venda'] * 20 / 100);
-        $nome = $show['nome'];
-        echo '
+    foreach ($result as $show) {
+      $desconto =  $show['pr_venda'] - ($show['pr_venda'] * 20 / 100);
+      echo '
   <div class="product-card">
+<i class="fa-solid fa-pen-to-square discount-tag"></i>
+<i class="fa-solid fa-trash-can discount-tag"></i>
     <div class="product-image">
-      <span class="discount-tag">20% off</span>
       <img src="' . $show["imagem1"] . '" class="product-thumb" alt="" />
-      
-      <button class="card-btn"><a href="' . $show['site_compra'] . '">ir ao site</a></button>
     </div>
     <div class="product-info">
       <h2 class="product-brand">' . $show['nome'] . '</h2>
@@ -65,11 +62,11 @@ mysqli_close($conexao);
       <span class="price">R$' . $desconto . '</span><span class="actual-price">R$' .  $show['pr_venda'] . '</span>
     </div>
   </div>';
-      }
-      ?>
+    }
+    ?>
 
 
-    </div>
+  </div>
   </section>
   <script>
     const productContainers = [

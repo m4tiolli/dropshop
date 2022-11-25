@@ -35,7 +35,7 @@ senha VARCHAR(255)
 
 CREATE TABLE produto (
 id INT(10) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-id_vendedor INT(10), FOREIGN KEY (id_vendedor) REFERENCES vendedor(id),
+id_vendedor INT(10) NOT NULL,
 nome VARCHAR (255),
 descricao VARCHAR (255),
 tipo VARCHAR(255),

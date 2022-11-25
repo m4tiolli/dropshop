@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -19,7 +23,7 @@
         <?php
         if (isset($_SESSION['msgv'])) {
             echo $_SESSION['msgv'];
-            $_SESSION['msgv'] == "";
+            $_SESSION['msgv'] = '';
             session_destroy();
         }
         ?>
@@ -47,7 +51,7 @@
             <a class="buttonsenha" href="esqsenhavend.php">Esqueceu a senha?</a>
             <p class="link">
                 Não tem conta?
-                <a href="cadastro.php"> Ir para Cadastro </a>
+                <a href="cadastrovend.php"> Ir para Cadastro </a>
             </p>
         </form>
     </div>

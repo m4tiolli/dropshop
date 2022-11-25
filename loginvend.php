@@ -22,7 +22,7 @@ if (isset($entrarF)) {
     }
   }
 
-  if (mysqli_num_rows($resultadoverifica) != 0) {
+  if (mysqli_num_rows($resultadoverifica) == 1) {
     if (!isset($_COOKIE['emailv'])) {
       setcookie("emailv", $emailF);
     }
@@ -30,8 +30,14 @@ if (isset($entrarF)) {
     header("Location: indexvend.php");
     $_SESSION['emailv'] = $emailF;
     $_SESSION['senhav'] = $senhaF;
-  } else {
-    $_SESSION['msgv'] = "<p>Usuário ou senha incorretos<p>";
+  } else if (mysqli_num_rows($resultadoverifica) == 0) {
+    $_SESSION['msgv'] = "<p id='mensagem'>Não existe usuário associado à essas informações.<p>";
+    header("Location: fazerloginvend.php");
+  }
+  
+  else {
+    $_SESSION['msgv'] = "<p id='mensagem'>Usuário ou senha incorretos.<p>";
     header("Location: fazerloginvend.php");
   }
 }
+

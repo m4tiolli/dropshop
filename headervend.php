@@ -13,7 +13,7 @@
         <div id="divLogin">
             <?php
             if (isset($_COOKIE["emailv"])) {
-                $mostrar = "<a class='logent' id='caditem' href='cadprod.php'>Cadastrar Item</a>";
+                $mostrar = "<a class='logent' id='caditem' href='cadastroprod.php'>Cadastrar Item</a>";
             } else {
                 $mostrar = "<a class='logent' id='log' href='fazerloginvend.php'>Entrar</a>";
             }
@@ -22,10 +22,12 @@
             <?php
             if (isset($_COOKIE["emailv"])) {
                 $mostrar2 = "<form method='POST' action='deslogavend.php'><input class='logent' id='ent' href='' type='submit' name='desloga' value='SAIR'></form>";
+                $mostrar3 = "<a class='logent' id='ent' href='prodvend.php'>Meus Produtos</a>";
             } else {
                 $mostrar2 = "<a class='logent' id='ent' href='cadastrovend.php'>Criar Conta</a>";
+                $mostrar3 = "";
             }
-            echo $mostrar3 = "<a class='logent' id='ent' href='prodvend.php'>Meus Produtos</a>";
+            echo $mostrar3;
             echo $mostrar2;
             ?>
         </div>

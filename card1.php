@@ -24,6 +24,15 @@ $linhas = mysqli_num_rows($result);
     a:hover {
       color: #fff;
     }
+
+    .card-btn:hover a {
+      color: #fff;
+    }
+
+    .card-btn:hover {
+  background: #000;
+  color: #fff;
+}
   </style>
 </head>
 
@@ -40,12 +49,13 @@ $linhas = mysqli_num_rows($result);
         $desconto =  $show['pr_venda'] - ($show['pr_venda'] * 20 / 100);
         $nome = $show['nome'];
         echo '
+       
   <div class="product-card">
     <div class="product-image">
       <span class="discount-tag">20% off</span>
       <img src="' . $show["imagem1"] . '" class="product-thumb" alt="" />
       
-      <button class="card-btn"><a href="' . $show['site_compra'] . '">ir ao site</a></button>
+      <button class="card-btn"><a href="verproduto.php?id=' . $show['id'] . '">ver produto</a></button>
     </div>
     <div class="product-info">
       <h2 class="product-brand">' . $show['nome'] . '</h2>
