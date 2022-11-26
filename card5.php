@@ -1,7 +1,7 @@
 <?php header("Content-type: text/html; charset=utf-8");
 include('conexao.php');
 mysqli_set_charset($conexao, "utf8");
-$sql = 'SELECT * FROM produto WHERE tipo = "calca" OR tipo = "bermuda" ';
+$sql = 'SELECT * FROM produto WHERE tipo = "Acessório" ';
 $result = mysqli_query($conexao, $sql);
 mysqli_close($conexao);
 
@@ -37,8 +37,8 @@ $linhas = mysqli_num_rows($result);
 
 <body>
 
-  <section class="product" id="calcas">
-    <h2 class="product-category">calças e bermudas</h2>
+  <section class="product" id="acessorios">
+    <h2 class="product-category">Acessórios</h2>
     <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
     <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
     <div class="product-container">

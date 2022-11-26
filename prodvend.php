@@ -28,6 +28,8 @@ mysqli_close($conexao);
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/6e68b6b4aa.js" crossorigin="anonymous"></script>
+  <script src="js/prodvend.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
   <style>
     a {
       text-decoration: none;
@@ -41,6 +43,28 @@ mysqli_close($conexao);
 </head>
 
 <body>
+  <div id="msgbox">
+    <?php
+    if(isset($_SESSION['exclusao'])){
+    if ($_SESSION['exclusao'] != "")  {
+      echo $_SESSION['exclusao'];
+      $_SESSION['exclusao'] == "";
+    }
+  }
+  if(isset($_SESSION['alteracao'])){
+    if ($_SESSION['alteracao'] != "")  {
+      echo $_SESSION['alteracao'];
+      $_SESSION['alteracao'] == "";
+    }
+  }
+    ?>
+
+    <script>
+      setTimeout(function() {
+        $('#msgbox').fadeOut("slow");
+      }, 5000);
+    </script>
+  </div>
 
   <h2 class="product-category">Seus Produtos</h2>
   <div class="product-container">
@@ -50,8 +74,8 @@ mysqli_close($conexao);
       $desconto =  $show['pr_venda'] - ($show['pr_venda'] * 20 / 100);
       echo '
   <div class="product-card">
-<i class="fa-solid fa-pen-to-square discount-tag"></i>
-<i class="fa-solid fa-trash-can discount-tag"></i>
+  <a href="editar.php?id=' . $show['id'] . '"><i class="fa-solid fa-pen-to-square discount-tag"></i></a>
+<a href="excluir.php?id=' . $show['id'] . '"><i class="fa-solid fa-trash-can discount-tag"></i></a>
     <div class="product-image">
       <img src="' . $show["imagem1"] . '" class="product-thumb" alt="" />
     </div>
@@ -59,7 +83,7 @@ mysqli_close($conexao);
       <h2 class="product-brand">' . $show['nome'] . '</h2>
       <p class="product-short-description">
         ' . $show['descricao'] . ' </p>
-      <span class="price">R$' . $desconto . '</span><span class="actual-price">R$' .  $show['pr_venda'] . '</span>
+      <span class="price">R$' . number_format($desconto, 2, ',', '.') . '</span><span class="actual-price">R$' .  number_format($show['pr_venda'], 2, ',', '.') . '</span>
     </div>
   </div>';
     }

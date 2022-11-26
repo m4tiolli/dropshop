@@ -26,12 +26,12 @@ if (isset($_SESSION['emailv']) && isset($_SESSION['senhav'])) {
     <div class="col-3">
         <select name="tipo">
             <option value="">Selecione o tipo</option>
-            <option value="camisa">Camisa</option>
-            <option value="camiseta">Camiseta</option>
-            <option value="calca">Calça</option>
-            <option value="bermuda">Bermuda</option>
-            <option value="sapato">Sapato</option>
-            <option value="acessorio">Acessório</option>
+            <option value="Camisa">Camisa</option>
+            <option value="Camiseta">Camiseta</option>
+            <option value="Calça">Calça</option>
+            <option value="Bermuda">Bermuda</option>
+            <option value="Sapato">Sapato</option>
+            <option value="Acessório">Acessório</option>
         </select><br>
         <span class="focus-border"></span>
     </div>

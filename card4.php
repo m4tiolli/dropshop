@@ -37,8 +37,8 @@ $linhas = mysqli_num_rows($result);
 
 <body>
 
-  <section class="product" id="destaques">
-    <h2 class="product-category">destaques</h2>
+  <section class="product" id="acessorios">
+    <h2 class="product-category">sapatos e tênis</h2>
     <button class="pre-btn"><img src="images/arrow.png" alt="" /></button>
     <button class="nxt-btn"><img src="images/arrow.png" alt="" /></button>
     <div class="product-container">

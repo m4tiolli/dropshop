@@ -13,8 +13,10 @@
         </div>
         <div id="divBusca">
             <div id=busca>
-                <input type="text" id="txtBusca" class="inputres" placeholder="Buscar..." />
-                <span class="fa-solid fa-magnifying-glass buttonPesquisa" id="pesquisa"></span>
+                <form action="pesquisa.php" method="post" autocomplete="off">
+                <input type="text" id="txtBusca" name="pesquisar" class="inputres" placeholder="Buscar..." />
+                <button class="fa-solid fa-magnifying-glass buttonPesquisa" id="pesquisa" type="submit"></button>
+                </form>
             </div>
         </div>
         <div id="divLogin">
@@ -28,7 +30,7 @@
             ?>
             <?php
             if (isset($_COOKIE["email"])) {
-                $mostrar2 = "<form method='POST' action='desloga.php'><input class='logent' id='ent' href='' type='submit' name='desloga' value='SAIR'></form>";
+                $mostrar2 = "<form method='POST' action='desloga.php' class='sair'><input class='logent' id='ent' href='' type='submit' name='desloga' value='SAIR'></form>";
             } else {
                 $mostrar2 = "<a class='logent' id='ent' href='cadastro.php'>Criar Conta</a>";
             }
@@ -39,23 +41,23 @@
     </header>
     <nav>
         <ul class="menu" id="nav">
-            <li><a href="#destaques">Destaques</a>
+            <li><a href="index.php#destaques">Destaques</a>
             </li>
-            <li><a href="#">Roupas</a>
+            <li><a href="index.php#destaques">Roupas</a>
                 <ul>
-                    <li><a href="#camisas">Camisetas</a></li>
-                    <li><a href="#camisas">Camisas</a></li>
-                    <li><a href="#calcados">Calças</a></li>
-                    <li><a href="#calcados">Bermudas</a></li>
+                    <li><a href="index.php#camisas">Camisetas</a></li>
+                    <li><a href="index.php#camisas">Camisas</a></li>
+                    <li><a href="index.php#calcados">Calças</a></li>
+                    <li><a href="index.php#calcados">Bermudas</a></li>
                 </ul>
             </li>
-            <li><a href="#">Calçados</a>
+            <li><a href="index.php#calcados">Calçados</a>
                 <ul>
-                    <li><a href="#">Sapatos</a></li>
-                    <li><a href="#">Tênis</a></li>
+                    <li><a href="index.php#calcados">Sapatos</a></li>
+                    <li><a href="index.php#calcados">Tênis</a></li>
                 </ul>
             </li>
-            <li><a href="#acessorios">Acessórios</a></li>
+            <li><a href="index.php#acessorios">Acessórios</a></li>
         </ul>
     </nav>
     <div id="confirmacao">

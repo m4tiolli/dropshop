@@ -31,7 +31,7 @@ body {
 }
 #backHeader {
   width: 100%;
-  height: 150px;
+  height: 185px;
   position: relative;
 }
 
@@ -261,9 +261,80 @@ body {
   padding-bottom: 30px;
 }
 
-#cardDiv1::after, #cardDiv2::after, #cardDiv3::after, #cardDiv4::after {
-  content: ' ';
+#cardDiv1::after,
+#cardDiv2::after,
+#cardDiv3::after,
+#cardDiv4::after {
+  content: " ";
   height: 3px;
   width: 60%;
   background-color: black;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 20px;
+  border-radius: 10px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 300px;
+}
+#slider ul li img {
+  width: 550px;
+  height: 550px;
+}
+a.control_prev,
+a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  color: #2a2a2a;
+  text-decoration: none;
+  font-size: 25px;
+  opacity: 0.8;
+  cursor: pointer;
+  font-weight: bolder;
+  font-family: Poppins;
+}
+
+a.control_prev:hover,
+a.control_next:hover {
+  opacity: 1;
+  transition: 0.1s;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
 }

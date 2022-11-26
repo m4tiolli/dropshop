@@ -1,0 +1,300 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(../fonts/Manrope-VariableFont_wght.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+#titulo {
+  font-family: Poppins;
+  font-weight: lighter;
+  width: 100%;
+  text-align: center;
+}
+#titulo::after {
+  content: " ";
+  background-color: #000;
+  height: 1px;
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+body {
+  overflow: hidden;
+}
+
+#principal {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 1;
+}
+
+#infos {
+  grid-column-start: 2;
+  margin-top: 2em;
+}
+
+#infos h2 {
+  font-family: Poppins;
+  font-weight: 500;
+  margin-top: 1em;
+}
+
+#id {
+  font-family: Roboto;
+  font-weight: 500;
+  color: #818181;
+  margin-top: 0.3em;
+}
+
+#tipo,
+#tamanho,
+#descricao {
+  margin-top: 2em;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.preco {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 1;
+  margin-top: 2em;
+  font-family: Roboto;
+  font-weight: 600;
+  width: 40%;
+}
+#preco {
+  grid-column-start: 1;
+  font-size: 2em;
+}
+#preco_old {
+  grid-column-start: 2;
+  font-size: 1em;
+  text-decoration: line-through;
+  margin-top: 0.4em;
+}
+#link {
+  padding: 3% 25%;
+  background-color: #805a2e;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: Manrope;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+  border-radius: 20px;
+  transition: 0.1s;
+}
+
+#link:hover {
+  background-color: #8d673c;
+}
+
+#link:active {
+  background-color: #684722;
+}
+#links {
+  margin-top: 4em;
+  display: block;
+  position: relative;
+}
+
+.error {
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+
+.erro {
+  font-family: "Poppins";
+  line-height: 1.3em;
+  font-weight: 700;
+  padding: 3em;
+  width: 40%;
+  background-color: #e45555;
+  color: rgb(128, 32, 32);
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 30%;
+}
+
+.link {
+  color: rgb(128, 32, 32);
+  text-decoration: none;
+}
+.link:hover {
+  color: rgb(59, 10, 10);
+  text-decoration: underline;
+}
+
+#erro {
+  font-family: "Poppins";
+  line-height: 1.3em;
+  font-weight: 700;
+  padding: 2em;
+  width: 40%;
+  background-color: #e45555;
+  color: rgb(128, 32, 32);
+  border-radius: 15px;
+  text-align: center;
+  top: 1em;
+  margin: auto;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 20px;
+  border-radius: 10px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 300px;
+}
+#slider ul li img {
+  width: 550px;
+  height: 550px;
+}
+a.control_prev,
+a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  color: #2a2a2a;
+  text-decoration: none;
+  font-size: 25px;
+  opacity: 0.8;
+  cursor: pointer;
+  font-weight: bolder;
+  font-family: Poppins;
+}
+
+a.control_prev:hover,
+a.control_next:hover {
+  opacity: 1;
+  transition: 0.1s;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+input {
+  margin-bottom: 1em;
+  width: 80%;
+  font: 15px/24px "Roboto";
+  color: #333;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: Poppins;
+}
+
+label {
+font-family: Roboto;
+text-decoration: underline;
+margin-bottom: 1em;
+}
+
+.effect-17 {
+	border: 0;
+	padding: 4px 0;
+	border-bottom: 1px solid #ccc;
+	background-color: transparent;
+}
+
+.effect-17~.focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background-color: #805a2e;
+	transition: 0.4s;
+}
+.effect-17:focus~.focus-border,
+.has-content.effect-17~.focus-border {
+	width: 100%;
+	transition: 0.4s;
+	left: 0;
+}
+.effect-17~label {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 9px;
+	color: #aaa;
+	transition: 0.3s;
+	z-index: -1;
+	letter-spacing: 0.5px;
+}
+.effect-17:focus~label,
+.has-content.effect-17~label {
+	top: -16px;
+	font-size: 12px;
+	color: #805a2e;
+	transition: 0.3s;
+}
+.button {
+  border-radius: 5em;
+  padding: 1em 1em;
+  font-family: "Manrope";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: none;
+  width: 80%;
+  background-color: #805a2e;
+  font-size: 1em;
+  font-weight: bolder;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  transition: .1s;
+}
+
+.button:hover {
+  background-color: #8d673c;
+}
+
+.button:active {
+  background-color: #684722;
+}

@@ -81,6 +81,7 @@ if(isset($_SESSION['msgv'])){
 		<div id="cardDiv2"></div>
 		<div id="cardDiv3"></div>
 		<div id="cardDiv4"></div>
+		<div id="cardDiv5"></div>
 
 	</div>
 	<div id="footerDiv"></div>
@@ -94,6 +95,7 @@ if(isset($_SESSION['msgv'])){
 			$("#cardDiv2").load("card2.php");
 			$("#cardDiv3").load("card3.php");
 			$("#cardDiv4").load("card4.php");
+			$("#cardDiv5").load("card5.php");
 		});
 	</script>
 </body>
