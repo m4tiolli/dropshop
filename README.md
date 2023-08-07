@@ -1,16 +1,49 @@
-# 💫 About Me:
-I am studying technical in systems development and computer technician for the internet integrated to high school.<br>I like to work with front end but I find the back end much wider.
+# Sistema de Dropshipping - Feira de Sites ETEC Bartolomeu Bueno da Silva
 
+Bem-vindo ao repositório do projeto de Sistema de Dropshipping desenvolvido para a Feira de Sites dos segundos anos de informática da ETEC Bartolomeu Bueno da Silva.
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/gabrielmatiolli) 
+## Descrição
 
-# 💻 Tech Stack:
-![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Google Cloud](https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=azure-devops&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white) ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Adobe Illustrator](https://img.shields.io/badge/adobeillustrator-%23FF9A00.svg?style=for-the-badge&logo=adobeillustrator&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=for-the-badge&logo=adobephotoshop&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) 	![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=m4tiolli&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=m4tiolli&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=m4tiolli&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+Este projeto foi criado com o propósito de apresentar um sistema de "dropshipping" simplificado, permitindo que vendedores anunciem seus produtos e direcionem os clientes para seus próprios sites para a finalização da compra. O sistema foi desenvolvido utilizando uma combinação de tecnologias web modernas, incluindo HTML, CSS, JavaScript, PHP e MySQL. Além disso, foram empregados frameworks JavaScript como Ajax e jQuery para aprimorar a experiência do usuário.
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+## Recursos
+
+- Anúncio de produtos pelos vendedores.
+- Redirecionamento para os sites dos vendedores para conclusão da compra.
+- Integração de tecnologias front-end e back-end para funcionalidade completa.
+- Utilização de frameworks JavaScript para melhorar a interatividade.
+
+## Tecnologias Utilizadas
+
+- HTML
+- CSS
+- JavaScript
+- PHP
+- MySQL
+- Frameworks JavaScript (Ajax, jQuery)
+
+## Como Utilizar
+
+1. Clone este repositório para o seu ambiente local.
+2. Configure um servidor web (como Apache) e um servidor MySQL para hospedar o projeto.
+3. Importe o banco de dados fornecido na pasta `database` para o seu servidor MySQL.
+4. Configure as informações de conexão com o banco de dados no arquivo de configuração `config.php`.
+5. Navegue pela interface do sistema e explore os recursos de anúncio e redirecionamento.
+
+## Contribuições
+
+Este projeto foi desenvolvido como parte da Feira de Sites dos segundos anos de informática da ETEC Bartolomeu Bueno da Silva. Como tal, atualmente não estamos aceitando contribuições externas. No entanto, ficamos gratos por qualquer feedback ou sugestões que possam ajudar a melhorar o projeto.
+
+## Autores
+
+- Gabriel Matiolli Fernandes
+- Natalia Cardoso Silva
+
+## Contato
+
+Para mais informações, entre em contato com os autores do projeto.
+[Instagram] (https://instagram.com/m4tiolli)
+[LinkedIn] (https://linkedin.com.br/in/gabrielmatiolli)
+---
+
+Este projeto foi desenvolvido como parte da Feira de Sites dos segundos anos de informática da ETEC Bartolomeu Bueno da Silva.
