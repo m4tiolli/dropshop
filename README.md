@@ -42,8 +42,8 @@ Este projeto foi desenvolvido como parte da Feira de Sites dos segundos anos de 
 ## Contato
 
 Para mais informações, entre em contato com os autores do projeto.
-[[Instagram] (https://instagram.com/m4tiolli)]
-[[LinkedIn] (https://linkedin.com.br/in/gabrielmatiolli)]
+[![Instagram] (https://instagram.com/m4tiolli)]
+[![LinkedIn] (https://linkedin.com.br/in/gabrielmatiolli)]
 ---
 
 Este projeto foi desenvolvido como parte da Feira de Sites dos segundos anos de informática da ETEC Bartolomeu Bueno da Silva.
